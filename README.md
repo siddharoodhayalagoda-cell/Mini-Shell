@@ -81,7 +81,7 @@ foreground, and does nothing (just reprints the prompt) if nothing is
 running. This is why real shells survive Ctrl+C but your running command
 doesn't.
 
-## Things you could extend next
+## Things we could extend next
 - Command history navigation with up/down arrows (needs raw terminal mode
   or a library like `readline`/`linenoise`)
 - Tab completion
@@ -89,15 +89,3 @@ doesn't.
 - Wildcard/glob expansion (`*.txt`)
 - Command substitution (`` `cmd` `` or `$(cmd)`)
 - Aliases
-
-## Talking about this project in interviews
-Be ready to explain, in your own words:
-- Why `fork()` + `execvp()` are two separate steps, and what each one does
-- Why built-in commands like `cd` can't be implemented via fork+exec
-- How `dup2()` redirects a file descriptor, and why file descriptors 0/1/2
-  (stdin/stdout/stderr) matter here
-- What a zombie process is, and why `waitpid()` (and `WNOHANG` for
-  background jobs) prevents them
-- Why the default SIGINT behavior would kill your shell, and how the
-  custom handler fixes that
-
